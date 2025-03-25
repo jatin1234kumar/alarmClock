@@ -5,6 +5,7 @@ const timePera = document.getElementById("time");
 const setBtn = document.getElementById("setBtn");
 const clearBtn = document.getElementById("clearBtn");
 const notifyPera = document.getElementById("notify");
+const logo = document.querySelector(".logo");
 
 // made time pera starts
 let defaultPera = `Alarm has not been set yet!`;
@@ -45,6 +46,7 @@ setInterval(() => {
   timePera.innerHTML = `${time}`;
 
   if (time == setTime) {
+    logo.classList.add("startmoving");
     if (typeof audio.loop == "boolean") {
       audio.loop = true;
     } else {
@@ -92,6 +94,7 @@ function makeOptDefault() {
 }
 makeOptDefault();
 
+// alarm set button
 setBtn.addEventListener("click", (e) => {
   e.preventDefault();
   setTime = `${opt1.value}:${opt2.value}:00 ${opt3.value}`;
@@ -110,12 +113,14 @@ setBtn.addEventListener("click", (e) => {
   }
 });
 
+// alarm off or clear button
 clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
   setTime = "";
   notifyPera.innerHTML = defaultPera;
   clearBtn.classList.add("hidden");
   setBtn.classList.remove("hidden");
+  logo.classList.remove("startmoving");
   audio.pause();
   audio.currentTime = 0;
   makeOptDefault();

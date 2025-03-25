@@ -129,3 +129,22 @@ form {
 .btn2 {
   background-color: rgb(241, 43, 43);
 }
+
+.startmoving {
+  animation: zoom-in-an-Out 0.4s ease infinite both;
+}
+
+@keyframes zoom-in-an-Out {
+  0% {
+    transform: scale(1.01) rotate(2deg);
+  }
+  30% {
+    transform: scale(1.02) rotate(-2deg);
+  }
+  60% {
+    transform: scale(1.03) rotate(2deg);
+  }
+  100% {
+    transform: scale(1) rotate(-2deg);
+  }
+}
