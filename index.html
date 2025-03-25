@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Javascript project</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="subcontainer">
+        <img class="logo" src="img/1.png" title="logo" />
+        <h1 class="heading">Alarm Clock</h1>
+        <p id="time" class="time">00:00:00 Am</p>
+        <form>
+          <div class="inputCont">
+            <select id="option1" class="option" value="00"></select>
+            <select id="option2" class="option"></select>
+            <select id="option3" class="option"></select>
+          </div>
+          <div class="btncont">
+            <button id="setBtn" type="submit" class="btn">Set Alarm</button>
+            <button id="clearBtn" type="submit" class="hidden btn btn2">
+              Clear Alarm
+            </button>
+          </div>
+          <p id="notify" class="pera"></p>
+        </form>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
